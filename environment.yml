@@ -1,4 +1,4 @@
-name: print_fires
+name: my_utils
 channels:
   - conda-forge
 dependencies:
