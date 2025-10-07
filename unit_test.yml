@@ -3,8 +3,6 @@ name: Tests
 on:
   push:
   pull_request:
-    branches:
-      - aew-v0
 
 jobs:
   run_unit_tests:
