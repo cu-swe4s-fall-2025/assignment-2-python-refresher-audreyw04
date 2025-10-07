@@ -1,0 +1,6 @@
+name: my_utils
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pycodestyle
