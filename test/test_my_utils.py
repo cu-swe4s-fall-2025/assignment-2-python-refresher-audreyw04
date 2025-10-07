@@ -3,6 +3,7 @@ import my_utils
 import random
 import os
 
+
 class TestMyUtils(unittest.TestCase):
 
     def test_calculate_mean_random(self):
@@ -20,7 +21,7 @@ class TestMyUtils(unittest.TestCase):
         mean = my_utils.calculate_mean(data)
         result = my_utils.calculate_sd(data, mean)
         self.assertIsInstance(result, float)
-    
+
     def test_calculate_mean(self):
         self.assertEqual(my_utils.calculate_mean([1, 2, 3]), 2.0)
         self.assertEqual(my_utils.calculate_mean([]), 0.0)
@@ -39,10 +40,9 @@ class TestMyUtils(unittest.TestCase):
     def test_calculate_sd(self):
         data = [1, 2, 3]
         mean = my_utils.calculate_mean(data)
-        self.assertAlmostEqual(my_utils.calculate_sd(data, mean), 0.816496580927726)
+        self.assertAlmostEqual(my_utils.calculate_sd(data, mean),
+                               0.816496580927726)
         self.assertEqual(my_utils.calculate_sd([], 0), 0.0)
 
         # Negative: single value (should be 0.0)
         self.assertEqual(my_utils.calculate_sd([5], 5.0), 0.0)
-
-   

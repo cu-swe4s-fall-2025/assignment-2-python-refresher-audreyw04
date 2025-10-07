@@ -1,6 +1,7 @@
 import argparse
 import my_utils as mu
 
+
 def parse_args():
     """
     This function works as a parse command line arguments
@@ -27,18 +28,22 @@ def parse_args():
                         type=str,
                         choices=['mean', 'median', 'sd'],
                         required=False,
-                        help='Calculate mean, median or standard deviation of the number of fires in the given country')
+                        help='Calculate mean, median or standard '
+                        'deviation of the number of fires in the given '
+                        'country')
     return parser.parse_args()
+
 
 def main():
     args = parse_args()
-    #get array of number of fires in the given country using get_column function
+    # get array of number of fires in the given
+    # country using get_column function
     fires = mu.get_column(args.file_name,
                           args.country_column,
                           args.country,
                           result_column=args.fires_column)
-    
-    #perform calculation if specified and print result
+
+    # perform calculation if specified and print result
     if len(fires) == 0:
         print("No data to perform calculations.")
         return
@@ -54,6 +59,7 @@ def main():
             print(f"Standard Deviation of number of fires: {sd}")
     if not args.calculate:
         print(fires)
+
 
 if __name__ == '__main__':
     main()
