@@ -1,4 +1,4 @@
-name: my_utils
+name: my_env
 channels:
   - conda-forge
 dependencies:
