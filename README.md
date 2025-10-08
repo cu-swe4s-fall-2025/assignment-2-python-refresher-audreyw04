@@ -62,3 +62,10 @@ $ sh run.sh
 Testing done using test_my_utils.py in python to test the functionality and accuracy of the calculation functions. 
 
 Testing done using test_print_fires.sh in bash to test the functionality of the print fires file and the calculations when applied to the specified data. 
+
+
+# Continuous Integration
+
+environment.yml file uses conda forge to set up an environment using python 3.10 and pycode style for the testing functions in the unit_test.yml
+
+unit_test.yml file runs three functions upon push and pull requests. The first checking for unit tests by running the associated test_my_utils.py file. The second function checks for properly formatted python files using pycodestyle. Lastly, the third function runs the functional tests appropriately using the test_print_fires.sh file. 
